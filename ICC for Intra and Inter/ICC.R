@@ -4,7 +4,7 @@ library(dplyr)
 library(writexl)
 
 # This is for intra-ICC
-data <- read_excel('c:/Users/12292/Desktop/321/ICC/modified_内部 ICC.xlsx')
+data <- read_excel('c:/Users/12292/Desktop/321/ICC/modified_intra ICC.xlsx')
 first_row_list <- colnames(data)[3:109]
 selected_columns <- c()
 icc_values <- list() 
@@ -37,11 +37,11 @@ write.csv(icc_df, file = "iccintra_values.csv", row.names = FALSE)
 datar1 <- data[selected_columns]
 datar2 <- data[paste0('n', selected_columns)]
 datar = data.frame(datar1, datar2)
-write_xlsx(datar, path='c:/Users/12292/Desktop/321/ICC/ICC 0.8 内部协调.xlsx')
+write_xlsx(datar, path='c:/Users/12292/Desktop/321/ICC/ICC 0.8 intra.xlsx')
 
 
 # This is for inter-ICC
-data <- read_excel('c:/Users/12292/Desktop/321/ICC/ICC.xlsx')
+data <- read_excel('c:/Users/12292/Desktop/321/ICC/ICC inter.xlsx')
 first_row_list <- colnames(data)[3:109]
 selected_columns <- c()
 icc_values <- list()  # Create an empty list to store ICC values for each feature
