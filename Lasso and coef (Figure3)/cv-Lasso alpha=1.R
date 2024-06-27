@@ -87,3 +87,7 @@ p <- ggplot(data, aes(x = reorder(Variable, Coefficient), y = Coefficient)) +
         plot.title = element_text(size = 17, family = "Times", color = "black"))
 
 print(p)
+
+selected_X <- X[, nonzero_variables]
+selected_data <- cbind(status = Y,selected_X)
+write.xlsx(selected_data, "selected_data315.xlsx")
