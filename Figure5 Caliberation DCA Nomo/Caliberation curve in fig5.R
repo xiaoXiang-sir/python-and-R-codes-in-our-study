@@ -4,7 +4,7 @@ library(pROC)
 library(rms)
 library(readxl)
 
-file_path <- "C:/Users/12292/Desktop/train size - 副本 (2).xlsx"
+file_path <- "C:/Users/12292/Desktop/train size - xx (2).xlsx"
 train_data <- read_excel(file_path)
 
 file1_path <- "C:/Users/12292/Desktop/test size.xlsx"
